@@ -25,7 +25,6 @@ import { SideBar } from "./sidebar";
 import { useAppConfig } from "../store/config";
 import { useMaskStore } from "../store/mask";
 import Swal from 'sweetalert2';
-import 'sweetalert2/src/sweetalert2.scss';
 
 export function Loading(props: { noLogo?: boolean }) {
   return (
