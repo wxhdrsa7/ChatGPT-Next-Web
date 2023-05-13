@@ -24,6 +24,8 @@ import {
 import { SideBar } from "./sidebar";
 import { useAppConfig } from "../store/config";
 import { useMaskStore } from "../store/mask";
+import Swal from 'sweetalert2';
+import 'sweetalert2/src/sweetalert2.scss';
 
 export function Loading(props: { noLogo?: boolean }) {
   return (
@@ -96,7 +98,38 @@ function Screen() {
   const location = useLocation();
   const isHome = location.pathname === Path.Home;
   const isMobileScreen = useMobileScreen();
+  // 添加这个 useEffect 以在页面加载完成后显示弹窗
+useEffect(() => {
+  const showAlert = () => {
+    Swal.fire({
+          title: '喜欢请打赏我们',
+          imageUrl: 'https://nav.iculture.cc/qun/donate.jpg',
+          imageWidth: 400,
+          imageAlt: '打赏图',
+          showDenyButton: true,
+          confirmButtonText: '已打赏',
+          denyButtonText: `下次一定`
+    });
+  };
 
+  const lastPopupTime = localStorage.getItem('lastPopupTime');
+
+  if (!lastPopupTime) {
+    showAlert();
+    localStorage.setItem('lastPopupTime', Date.now().toString());
+  } else {
+    const currentTime = Date.now();
+    const timeDifference = currentTime - parseInt(lastPopupTime);
+
+    // 7 天的毫秒数
+    const sevenDaysInMilliseconds = 7 * 24 * 60 * 60 * 1000;
+
+    if (timeDifference > sevenDaysInMilliseconds) {
+      showAlert();
+      localStorage.setItem('lastPopupTime', Date.now().toString());
+    }
+  }
+}, []);
   return (
     <div
       className={
