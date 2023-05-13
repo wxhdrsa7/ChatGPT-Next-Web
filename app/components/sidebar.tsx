@@ -119,9 +119,10 @@ export function SideBar(props: { className?: string }) {
       }`}
     >
       <div className={styles["sidebar-header"]}>
-        <div className={styles["sidebar-title"]}>ChatGPT Next</div>
+        <div className={styles["sidebar-title"]}>纯公益免费无限制</div>
         <div className={styles["sidebar-sub-title"]}>
-          Build your own AI assistant.
+         QQ交流群<a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=wdxnhn3hZjc_LeIGaDxLSgo0gWy5iNYQ&authKey=fcsAGMf0tymXJDnuenPT0fNDlisgXKm3kUBb%2FNhTwRuPx%2Bsl7cahrzbTBOXn1Vq3&noverify=0&group_code=480712684"><strong>480712684</strong></a> <br />
+             服务器赞助商<a href="https://www.74idc.cn/aff/HJIMHHBL"><strong>www.74idc.cn</strong></a> 
         </div>
         <div className={styles["sidebar-logo"] + " no-dark"}>
           <ChatGptIcon />
