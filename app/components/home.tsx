@@ -29,7 +29,7 @@ import Swal from 'sweetalert2';
 export function Loading(props: { noLogo?: boolean }) {
   return (
     <div className={styles["loading-content"] + " no-dark"}>
-      {!props.noLogo && <BotIcon />}
+            {!props.noLogo && <img src="https://www.iculture.cc/icon/logo_60_60.png" width="30px"/>}
       <LoadingIcon />
     </div>
   );
