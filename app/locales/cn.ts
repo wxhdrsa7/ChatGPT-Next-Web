@@ -170,20 +170,7 @@ const cn = {
   },
   Store: {
     DefaultTopic: "新的聊天",
-    BotHello: "## ⛔紧急通知
-
-**近期，用户访问量激增，官方大量处理账号，可能导致域名被污染、
-部分地区打不开等情况。为防止找不到我们请加入社群！！**
-
-## ✔请各位加入社群，谨防失联！！！
-
-![join](https://nav.iculture.cc/qun/join.png)
-
-## ⭐特别说明，以下都是赞助商，属于第三方网站，与本站无关，概不负责！
-**FancyPig导航站：[nav.iculture.cc](https://nav.iculture.cc)** 
-**SK赞助商：[djsopenai.xyz](https://djsopenai.xyz)** 
-**SK赞助商：[api.803000.xyz/v](http://api.803000.xyz/v)**
-**服务器赞助商：[www.74idc.cn](https://www.74idc.cn/aff/HJIMHHBL)**",
+    BotHello: "有什么可以帮你的吗",
     Error: "出错了，稍后重试吧",
     Prompt: {
       History: (content: string) =>
